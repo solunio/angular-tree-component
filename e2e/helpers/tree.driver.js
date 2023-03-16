@@ -14,7 +14,11 @@ class BaseDriver {
   }
 
   getNode(name) {
-    const selector = this.getNodes().find('tree-node-content span').withText(name).parent('tree-node').nth(0);
+    const selector = this.getNodes()
+      .find('tree-node-content span')
+      .withText(name)
+      .parent('tree-node')
+      .nth(0);
 
     return new NodeDriver(selector);
   }
@@ -25,7 +29,6 @@ class BaseDriver {
 }
 
 class NodeDriver extends BaseDriver {
-
   isPresent() {
     return this.selector.exists;
   }
@@ -48,7 +51,7 @@ class NodeDriver extends BaseDriver {
 
   isIndeterminate() {
     return this.getCheckbox().addCustomDOMProperties({
-      indeterminate: el => el.indeterminate
+      indeterminate: (el) => el.indeterminate
     }).indeterminate;
   }
 
@@ -67,7 +70,7 @@ class NodeDriver extends BaseDriver {
   getCheckbox() {
     return this.selector.find('.tree-node-checkbox');
   }
-  
+
   getChildren() {
     return this.selector.find('.tree-children');
   }
@@ -87,12 +90,8 @@ class NodeDriver extends BaseDriver {
   click(t) {
     return t.click(this.getNodeContentWrapper());
   }
-  dblclick(t) {
-
-  }
-  contextMenu(t) {
-
-  }
+  dblclick(t) {}
+  contextMenu(t) {}
   dragToNode(t, node) {
     return t.dragToElement(
       this.getNodeContentWrapper(),
@@ -100,10 +99,7 @@ class NodeDriver extends BaseDriver {
     );
   }
   dragToDropSlot(t, node) {
-    return t.dragToElement(
-      this.getNodeContentWrapper(),
-      node.getDropSlot()
-    );
+    return t.dragToElement(this.getNodeContentWrapper(), node.getDropSlot());
   }
   ctrlDragToNode(t, node) {
     return t.dragToElement(
@@ -143,7 +139,7 @@ class TreeDriver extends BaseDriver {
   }
   keyEnter(t) {
     return t.pressKey('enter');
-}
+  }
   keySpace(t) {
     return t.pressKey('space');
   }

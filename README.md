@@ -8,7 +8,7 @@
 
 Install `angular-tree-component`:
 
-```npm install @circlon/angular-tree-component```
+`npm install @circlon/angular-tree-component`
 
 Import `TreeModule`:
 
@@ -30,6 +30,7 @@ Add css to `styles.scss` or include in `angular.json`:
 ```
 
 ## Docs, Demos & More
+
 We are redoing the documentation. You can find the new documentation here:
 [https://circlongroup.github.io/angular-tree-component/](https://circlongroup.github.io/angular-tree-component/)
 
@@ -38,6 +39,7 @@ The API Reference is still in our old documentation for now:
 [https://angular2-tree.readme.io/docs/](https://angular2-tree.readme.io/docs/)
 
 ## Support
+
 [Stackoverflow](https://stackoverflow.com/questions/tagged/angular-tree-component)
 
 [Slack Community](https://angular-tree-component.herokuapp.com/)
@@ -53,7 +55,7 @@ Run `npm run build` (`npm run build:win` for windows users) to build. Run `npm s
 To run tests locally - make sure port 4200 is available and run:
 
 ```
-$ npm run build              # build:win for windows; wait until build finished 
+$ npm run build              # build:win for windows; wait until build finished
 $ npm run start:example-app  # Wait until webpack finishes and http://localhost:4200 is available
 $ npm run test:dev
 ```

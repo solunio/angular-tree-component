@@ -5,11 +5,4 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './load-more-example.component.html',
   styleUrls: ['./load-more-example.component.scss']
 })
-export class LoadMoreExampleComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+export class LoadMoreExampleComponent {}

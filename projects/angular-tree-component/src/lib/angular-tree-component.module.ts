@@ -20,12 +20,14 @@ import { TreeDraggedElement } from './models/tree-dragged-element.model';
 import { TreeVirtualScroll } from './models/tree-virtual-scroll.model';
 import { LoadingComponent } from './components/loading.component';
 import { TreeComponent } from './components/tree.component';
-import { TreeNodeComponent } from './components/tree-node.component';
+import {
+  TreeNodeChildrenComponent,
+  TreeNodeCollectionComponent,
+  TreeNodeComponent
+} from './components/tree-node.component';
 import { TreeNodeContent } from './components/tree-node-content.component';
 import { TreeNodeDropSlot } from './components/tree-node-drop-slot.component';
 import { TreeNodeExpanderComponent } from './components/tree-node-expander.component';
-import { TreeNodeChildrenComponent } from './components/tree-node-children.component';
-import { TreeNodeCollectionComponent } from './components/tree-node-collection.component';
 import { TreeNodeWrapperComponent } from './components/tree-node-wrapper.component';
 import { TreeViewportComponent } from './components/tree-viewport.component';
 import { TreeNodeCheckboxComponent } from './components/tree-node-checkbox.component';
@@ -88,6 +90,7 @@ export {
   LoadingComponent,
   TreeAnimateOpenDirective,
   TreeComponent,
+  TreeMobxAutorunDirective,
   TreeNodeComponent,
   TreeNodeWrapperComponent,
   TreeNodeContent,

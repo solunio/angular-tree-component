@@ -1,10 +1,12 @@
 ## PR Checklist
+
 Please check if your PR fulfills the following requirements:
 
 - [ ] The commit message follows our guidelines: https://github.com/CirclonGroup/angular-tree-component/blob/master/CONTRIBUTING.md#commit-message-guidelines
 - [ ] Tests for the changes have been added (for bug fixes / features)
 
 ## PR Type
+
 What kind of change does this PR introduce?
 
 <!-- Please check the one that applies to this PR using "x". -->
@@ -21,6 +23,7 @@ What kind of change does this PR introduce?
 ```
 
 ## What is the current behavior?
+
 <!-- Please describe the current behavior that you are modifying, or link to a relevant issue. -->
 
 Closes #

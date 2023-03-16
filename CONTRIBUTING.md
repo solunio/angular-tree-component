@@ -3,6 +3,7 @@
 Thank you for reading this, we always welcome help make this project even better! Without the help from our contributors this project would not be possible.
 
 ## Code of Conduct
+
 Please read and follow our [Code of Conduct][coc].
 
 ## Setup
@@ -41,8 +42,8 @@ Search through other issues to see if there is already a previous issue for the 
 
 ## Commit Message Guidelines
 
-We have very precise rules over how our git commit messages can be formatted.  This leads to **more
-readable messages** that are easy to follow when looking through the **project history**.  But also,
+We have very precise rules over how our git commit messages can be formatted. This leads to **more
+readable messages** that are easy to follow when looking through the **project history**. But also,
 we use the git commit messages to **generate the Angular Tree Component change log**.
 
 ### Commit Message Format

@@ -1,15 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-columns-example',
   templateUrl: './columns-example.component.html',
   styleUrls: ['./columns-example.component.scss']
 })
-export class ColumnsExampleComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+export class ColumnsExampleComponent {}

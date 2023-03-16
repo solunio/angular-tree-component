@@ -8,9 +8,9 @@ describe('ActionsComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ActionsComponent ]
-    })
-    .compileComponents();
+      declarations: [ActionsComponent],
+      teardown: { destroyAfterEach: false }
+    }).compileComponents();
   }));
 
   beforeEach(() => {

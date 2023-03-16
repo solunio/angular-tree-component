@@ -7,7 +7,7 @@ exports.config = {
   capabilities: {
     browserName: 'chrome'
   },
-  onPrepare: function() {
+  onPrepare: function () {
     jasmine.getEnv().addReporter(
       new Jasmine2HtmlReporter({
         savePath: 'e2eResults'
@@ -15,4 +15,4 @@ exports.config = {
     );
   },
   useAllAngular2AppRoots: true
-}
+};

@@ -1,13 +1,11 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/angular-tree-component",
-  "assets": ["src/lib/angular-tree-component.css"],
+  "assets": [
+    { "input": "./src/lib", "glob": "./angular-tree-component.css", "output": "./css" }
+  ],
   "lib": {
-    "entryFile": "src/public-api.ts",
-    "umdModuleIds": {
-      "mobx": "mobx",
-      "lodash-es": "lodash-es"
-    }
+    "entryFile": "src/public-api.ts"
   },
-  "whitelistedNonPeerDependencies": ["core-js", "lodash-es", "mobx"]
+  "allowedNonPeerDependencies": ["core-js", "lodash-es", "mobx"]
 }

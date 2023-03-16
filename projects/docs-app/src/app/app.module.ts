@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatButtonModule } from '@angular/material/button';
+import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
 import { HttpClientModule } from '@angular/common/http';
 import { GettingStartedComponent } from './getting-started/getting-started.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -37,7 +37,7 @@ import { GuidesModule } from './guides/guides.module';
     ExamplesModule,
     TreeModule,
     FundamentalsModule,
-    GuidesModule,
+    GuidesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

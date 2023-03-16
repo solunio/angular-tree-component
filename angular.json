@@ -28,7 +28,13 @@
               "projects/example-app/src/assets"
             ],
             "styles": ["projects/example-app/src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -67,22 +73,26 @@
                 }
               ],
               "tsConfig": "projects/example-app/tsconfig.es5.app.json"
-            }
-          }
+            },
+            "development": {}
+          },
+          "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "example-app:build"
-          },
+          "options": {},
           "configurations": {
             "production": {
               "browserTarget": "example-app:build:production"
             },
             "es5": {
               "browserTarget": "example-app:build:es5"
+            },
+            "development": {
+              "browserTarget": "example-app:build:development"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
@@ -103,13 +113,12 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/example-app/tsconfig.app.json",
-              "projects/example-app/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**"]
+            "lintFilePatterns": [
+              "projects/example-app/**/*.ts",
+              "projects/example-app/**/*.html"
+            ]
           }
         }
       }
@@ -125,6 +134,11 @@
           "options": {
             "tsConfig": "projects/angular-tree-component/tsconfig.lib.json",
             "project": "projects/angular-tree-component/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/angular-tree-component/tsconfig.prod.json"
+            }
           }
         },
         "test": {
@@ -136,13 +150,12 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/angular-tree-component/tsconfig.lib.json",
-              "projects/angular-tree-component/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**"]
+            "lintFilePatterns": [
+              "projects/angular-tree-component/**/*.ts",
+              "projects/angular-tree-component/**/*.html"
+            ]
           }
         }
       }
@@ -172,7 +185,13 @@
               "projects/docs-app/src/assets"
             ],
             "styles": ["projects/docs-app/src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -201,19 +220,23 @@
                   "maximumError": "10kb"
                 }
               ]
-            }
-          }
+            },
+            "development": {}
+          },
+          "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "docs-app:build"
-          },
+          "options": {},
           "configurations": {
             "production": {
               "browserTarget": "docs-app:build:production"
+            },
+            "development": {
+              "browserTarget": "docs-app:build:development"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -237,18 +260,15 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/docs-app/tsconfig.app.json",
-              "projects/docs-app/tsconfig.spec.json",
-              "projects/docs-app/e2e/tsconfig.json"
-            ],
-            "exclude": ["**/node_modules/**"]
+            "lintFilePatterns": [
+              "projects/docs-app/**/*.ts",
+              "projects/docs-app/**/*.html"
+            ]
           }
         }
       }
     }
-  },
-  "defaultProject": "example-app"
+  }
 }
